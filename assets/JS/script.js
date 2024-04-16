@@ -8,14 +8,14 @@ fetch(apiUrl)
   .then(response => {
     // Check if the response is successful
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('no worky try again');
     }
     // Parse the JSON response
     return response.json();
   })
-  .then(data => {
+  .then(imageInfo => {
     // Work with the JSON data
-    console.log(data);
+    console.log(imageInfo);
   })
   .catch(error => {
     // Handle any errors that occurred during the fetch
