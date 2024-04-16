@@ -1,5 +1,46 @@
+
 :root {
     --lblue: #538AC3;
     --lgrey: #E0E1EA;
     --black: #0B0C13;
   }
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header, footer { 
+    background: #5caee5; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%;
+  }
+  .main-body { /* Flex container */
+    display: flex;
+  }
+  .sidebar { 
+    width: 20%; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100vh;
+  }
+  .content { 
+    width: 80%; /* Adjusts the content area width */
+    padding: 10px; /* Provides padding within the content area */
+  }
+  input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  button { 
+    display: block; 
+    margin: 10px 0; 
+    padding: 10px; 
+    width: 100%; 
+  }
+  
+
