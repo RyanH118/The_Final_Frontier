@@ -1,3 +1,9 @@
+
+:root {
+    --lblue: #538AC3;
+    --lgrey: #E0E1EA;
+    --black: #0B0C13;
+  }
 body { 
     font-family: Arial, sans-serif; 
     margin: 0;
@@ -37,3 +43,4 @@ body {
     width: 100%; 
   }
   
+
