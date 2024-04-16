@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images</title>
+	<title>NASA Image Search</title>
 </head>
 <body>
-    <input type="search" placeholder="Search..." aria-label="Search Bar">
-    <script src="../assets/JS/image.js"></script>
+	<input type="text" id="searchInput" placeholder="Enter keyword...">
+	<button onclick="searchNasaImages()">Search</button>
+	<br><br>
+    <div id="imageContainer"></div>
+
+	<script src="../assets/JS/image.js"></script>
 </body>
 </html>
