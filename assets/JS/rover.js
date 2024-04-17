@@ -9,18 +9,18 @@ const roverAPI = function () {
                 response.json().then(function (data) {
                     console.log(data);
                     
-                    for (let i = 0; i < data.latest_photos.length; i++) {
-                        const roverImg = testBody.append(`<img src= ${data.latest_photos[i].img_src}></img>`)
-                        $(roverImg).attr(`src','${data.latest_photos[i].img_src}`)
+                    //generate random number
+                    let numElements = 5
+                    for (let i = 0; i < numElements; i++) {
+                        let randomNum = Math.floor(Math.random() * data.latest_photos.length)
+                        console.log(randomNum);
+                        
+                        const roverImg = testBody.append(`<img src= ${data.latest_photos[randomNum].img_src}></img>`)
+                        $(roverImg).attr(`src','${data.latest_photos[randomNum].img_src}`)
                         $(testBody).append(roverImg)
-                    }
-                })
-            }
-        })
-}
+                    }})}})}
 roverAPI()
-// Shuffle array
-const shuffled = array.sort(() => 0.5 - Math.random());
-
-// Get sub-array of first n elements after shuffled
-let selected = shuffled.slice(0, n);
+// int numElements = 3;  
+// for (int i = 0; i<numElements; i++) {  
+//     int randomIndex = (int) (Math.random() * myArray.length);  
+//     int randomElement = myArray[randomIndex];
