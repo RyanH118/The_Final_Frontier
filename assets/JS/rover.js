@@ -9,7 +9,7 @@ const roverAPI = function () {
                 response.json().then(function (data) {
                     
                     //generate random number
-                    let numElements = 5
+                    let numElements = 6
                     for (let i = 0; i < numElements; i++) {
                         let randomNum = Math.floor(Math.random() * data.latest_photos.length)
                         
