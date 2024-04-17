@@ -1,0 +1,28 @@
+/* CSS for card container */
+.row {
+    overflow-x: auto; /* Enable horizontal scrollbar if cards exceed container width */
+    white-space: nowrap; /* Prevent cards from wrapping to the next line */
+  }
+  
+/* CSS for each card */
+.card {
+    width: 300px; /* Increase the width to accommodate longer titles */
+    margin-right: 10px; /* Add margin between cards */
+    display: inline-block; /* Display cards inline */
+  }
+  
+  /* CSS for the card title */
+  .card-title {
+    overflow-wrap: break-word; /* Allow the title text to break into multiple lines */
+  }
+  
+  /* CSS for the card image */
+  .card img {
+    width: 100%; /* Make the image fill the entire width of the card */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* CSS for description modal */
+  .modal {
+    max-width: 80%; /* Adjust the maximum width of the modal */
+  }

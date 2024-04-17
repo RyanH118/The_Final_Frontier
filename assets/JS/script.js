@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function () {
   // Get today's date in the format YYYY-MM-DD
   const today = new Date().toISOString().split('T')[0];
-document.getElementById('datePicker').value = today;
+  document.getElementById('datePicker').value = today;
+
   // Function to fetch NASA's APOD for a specific date
   function fetchAPOD(date) {
     const apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
@@ -50,6 +51,26 @@ document.getElementById('datePicker').value = today;
           contentBox.appendChild(imageElement);
           contentBox.appendChild(titleElement);
           contentBox.appendChild(explanationElement);
+
+          // Add event listener to "Add to Favorites" button
+          const addToFavoritesButton = document.getElementById('addToFavoritesButton');
+          addToFavoritesButton.addEventListener('click', function () {
+            // Store image data in local storage
+            const favoriteAPOD = JSON.parse(localStorage.getItem('favoriteAPOD')) || [];
+            // Check if the image is already in favorites
+            const isDuplicate = favoriteAPOD.some(apod => apod.title === data.title);
+            if (!isDuplicate) {
+              favoriteAPOD.push({
+                title: data.title,
+                url: data.url,
+                explanation: data.explanation
+              });
+              localStorage.setItem('favoriteAPOD', JSON.stringify(favoriteAPOD));
+              console.log('Added to favorites:', data.title);
+            } else {
+              console.log('APOD is already in favorites.');
+            }
+          });
         } else {
           console.error('Media type is not an image.');
         }
@@ -66,6 +87,8 @@ document.getElementById('datePicker').value = today;
   document.getElementById('datePicker').addEventListener('change', function (event) {
     const selectedDate = event.target.value;
     fetchAPOD(selectedDate);
+  });
 });
+
 });
 
