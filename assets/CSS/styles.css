@@ -19,17 +19,17 @@ body {
   .main-body { /* Flex container */
     display: flex;
   }
-  .sidebar { 
-    width: 20%; 
+   .sidebar { 
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: 100vh;
   }
-  .content { 
-    width: 80%; /* Adjusts the content area width */
-    padding: 10px; /* Provides padding within the content area */
+
+  .content img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    max-height: 80vh; /* Limit the height to 80% of viewport height */
   }
   input[type="search"] {
     width: 100%;

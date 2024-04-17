@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
           // Check if the media type is an image
           if (data.media_type === 'image') {
-            const contentBox = document.querySelector('.content');
+            const contentBox = document.querySelector('.content')
   
             // Create image element
             const imageElement = document.createElement('img');
