@@ -89,6 +89,3 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchAPOD(selectedDate);
   });
 });
-
-});
-
