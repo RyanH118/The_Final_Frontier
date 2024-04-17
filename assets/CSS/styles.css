@@ -30,6 +30,7 @@ body {
   .content img {
     max-width: 100%; /* Ensure the image fits within the container */
     max-height: 80vh; /* Limit the height to 80% of viewport height */
+    padding-top: 30px;
   }
   input[type="search"] {
     width: 100%;

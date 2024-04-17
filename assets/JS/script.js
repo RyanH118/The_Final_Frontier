@@ -62,3 +62,4 @@ document.getElementById('datePicker').value = today;
     fetchAPOD(selectedDate);
 });
 });
+
