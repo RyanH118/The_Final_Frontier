@@ -50,3 +50,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call the fetchAPOD function when the DOM content is loaded
     fetchAPOD();
   });
+
+  
