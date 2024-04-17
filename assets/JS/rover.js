@@ -20,7 +20,7 @@ const roverAPI = function () {
                         
                          const roverCard = cardContainer.append(`
                          
-                             <div class=' col card s1 m4 medium'>
+                             <div class=' col card s12 m6 l4 medium'>
                                  <div class= card-image>
                                      <img src='${roverImg}'>
                                  </div>  
