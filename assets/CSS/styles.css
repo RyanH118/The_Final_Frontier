@@ -42,5 +42,7 @@ body {
     padding: 10px; 
     width: 100%; 
   }
-  
 
+  #roverCard {
+    margin: 5px;
+  }

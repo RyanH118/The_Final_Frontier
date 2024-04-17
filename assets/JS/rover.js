@@ -1,7 +1,7 @@
 const cardContainer = $('.cardContainer')
 //fetch rover api
 const roverAPI = function () {
-    const apiUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=DEMO_KEY'
+    const apiUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=gRg84HZYCwV9IlNQ3K81q8e8Ctu2Cym974PwErqa'
 
     fetch(apiUrl)
         .then(function (response) {
@@ -20,7 +20,7 @@ const roverAPI = function () {
                         
                          const roverCard = cardContainer.append(`
                          
-                             <div class=' col card s12 m6 l4 medium'>
+                             <div class='col card s12 m5 l3 medium' id='roverCard'>
                                  <div class= card-image>
                                      <img src='${roverImg}'>
                                  </div>  
@@ -40,4 +40,3 @@ const roverAPI = function () {
         })
 }
 roverAPI()
-//<div class= 'col s2 m7'>
