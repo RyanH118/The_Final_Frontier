@@ -19,8 +19,8 @@ const roverAPI = function () {
                         camera = `${data.latest_photos[randomNum].camera.full_name}`
                         
                          const roverCard = cardContainer.append(`
-                         <div class= 'col s2 m7'>
-                             <div class='card s1'>
+                         
+                             <div class=' col card s1 m4 medium'>
                                  <div class= card-image>
                                      <img src='${roverImg}'>
                                  </div>  
@@ -40,3 +40,4 @@ const roverAPI = function () {
         })
 }
 roverAPI()
+//<div class= 'col s2 m7'>
