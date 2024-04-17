@@ -10,7 +10,33 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
-  header, footer { 
+
+  header {
+    position: relative; /* Establishes a positioning context for absolute elements inside */
+    width: 100%;
+    height: 300px; /* Adjust this as needed */
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full area */
+}
+
+.header-text {
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    color: white; /* Makes text visible against darker images */
+    font-size: 3em; /* Adjust font size as needed */
+    text-align: center; /* Centers the text horizontally */
+    font-family: "Orbitron";
+}
+
+
+  footer { 
     background: #5caee5; 
     padding: 10px; 
     text-align: center; 
