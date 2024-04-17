@@ -12,7 +12,7 @@ const roverAPI = function () {
                     let numElements = 6
                     for (let i = 0; i < numElements; i++) {
                         let randomNum = Math.floor(Math.random() * data.latest_photos.length)
-                        
+                        console.log(randomNum);
                          // create cards and append to page
                         roverImg = `${data.latest_photos[randomNum].img_src}`
                         pictureDate = `${data.latest_photos[randomNum].earth_date}`
@@ -20,7 +20,7 @@ const roverAPI = function () {
                         
                          const roverCard = cardContainer.append(`
                          
-                             <div class='col card s12 m5 l3 medium' id='roverCard'>
+                             <div class='col card s12 l5 medium' id='roverCard'>
                                  <div class= card-image>
                                      <img src='${roverImg}'>
                                  </div>  
@@ -39,4 +39,10 @@ const roverAPI = function () {
             }
         })
 }
+
+const newImage = function(){
+    cardContainer.html('')
+    roverAPI()
+}
+$('#refreshButton').click(newImage)
 roverAPI()
