@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>NASA Image Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasa image search</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="../assets/CSS/styles.css">
 </head>
+
 <body>
-	<input type="text" id="searchInput" placeholder="Enter keyword...">
+	<input type="text" id="searchInput" placeholder="What will space show you?">
 	<button onclick="searchNasaImages()">Search</button>
 	<br><br>
     <div id="imageContainer"></div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="../assets/JS/image.js"></script>
 </body>
 </html>
