@@ -73,3 +73,12 @@ header img {
   #roverCard {
     margin: 5px;
   }
+
+  #imageContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #imagesCard {
+    width: 500px;
+  }

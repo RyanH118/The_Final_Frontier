@@ -2,7 +2,7 @@ var apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
 
 function searchNasaImages() {
     const keyword = document.getElementById("searchInput").value;
-    const url = `https://images-api.nasa.gov/search?q=${keyword}&media_type=image&page=1&page_size=10&`;
+    const url = `https://images-api.nasa.gov/search?q=${keyword}&media_type=image&page=1&page_size=12&`;
 
     // Make a GET request to the API
     fetch(url)
@@ -24,9 +24,22 @@ function searchNasaImages() {
                 const imageDiv = document.createElement("div");
                 imageDiv.classList.add("image-container");
                 imageDiv.innerHTML = `
-            <h2>${title}</h2>
-            <img src= "${image}"></img>
-            <p>${description}</p>`
+                <div class="row">
+                    <div class="col s12 m6" id="imagesCard">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src= "${image}"></img>
+                                <span class="card-title">${title}</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <p>${description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+                                
 
                 imageContainer.appendChild(imageDiv);
             });
