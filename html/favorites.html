@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Frontier: Astronomy Picture of the Day</title>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="../assets/CSS/styles.css">
   <link rel="stylesheet" href="../assets/CSS/favorites.css">
 </head>
 
 <div>
-    <h1>The Final Frontier</h1>
+  <h1>The Final Frontier</h1>
 </div>
 
 <div class="row">
@@ -23,16 +23,27 @@
       <a href="./favorites.html"><button>Favorites</button></a>
     </div>
   </div>
-  <div class="content col-8"></div>
+  <!-- Box to append favorites to -->
+  <div class="content col-8">
+  </div>
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+      <!-- Modal content goes here -->
+      <img id="modalImage" src="" alt="Modal Image">
+  </div>
 </div>
 
 
 
 <footer>
-    <p>Contact Me: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="../assets/JS/favorites.js"></script>
+  <p>Contact Me: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../assets/JS/favorites.js"></script>
 </body>
 
 </html>

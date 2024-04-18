@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Frontier: Astronomy Picture of the Day</title>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="./assets/CSS/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -23,26 +22,27 @@
   <div class="row">
     <div class="col s2">
       <div class="sidebar">
-        <a href="./index.html"><button>Home</button></a>
-        <a href="./html/rover_pictures.html"><button>Rover Images</button></a>
-        <a href="./html/image_library.html"><button>Image Library</button></a>
-        <a href="./html/favorites.html"><button>Favorites</button></a>
+        <a href="./index.html" class="btn">Home</a>
+        <a href="./html/rover_pictures.html" class="btn">Rover Images</a>
+        <a href="./html/image_library.html" class="btn">Image Library</a>
+        <a href="./html/favorites.html" class="btn">Favorites</a>
       </div>
+      
     </div>
 
     <div class="col s8">
       <input type="text" class="datepicker" id="datePicker" placeholder="Search..." aria-label="Search Bar">
       <div class="content center-align">
       </div>
-
-      <button id="addToFavoritesButton">Add to Favorites</button>
+      <div class="cardContainer"></div>
      </div>
   </div>
 
 
   <footer>
-    <p>Contact Me: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p style="color: white;">Contact Me: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
   </footer>
+  <link rel="stylesheet" href="./assets/CSS/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./assets/JS/script.js"></script>
 </body>

@@ -1,14 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.datepicker');
-  var instances = M.Datepicker.init(elems, {
-    format: 'yyyy-mm-dd'
-  });
-});
-// Have picture of the day on the main page.
-// make calendar widget where each click of the previous day shows that days image with the api.
-// make an error show up when they click a future date saying "This picture hasn't been posted yet." maybe a 404 picture.
-// When a new picture is added the desc is changed reflecting the image that is being shown.
-
 document.addEventListener("DOMContentLoaded", function () {
   // Get today's date in the format YYYY-MM-DD
   const today = new Date().toISOString().split('T')[0];
@@ -29,28 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         // Check if the media type is an image
         if (data.media_type === 'image') {
-          const contentBox = document.querySelector('.content');
-
-          // Clear previous content
-          contentBox.innerHTML = '';
-
-          // Create image element
-          const imageElement = document.createElement('img');
-          imageElement.src = data.url;
-          imageElement.alt = data.title;
-
-          // Create title element
-          const titleElement = document.createElement('h2');
-          titleElement.textContent = data.title;
-
-          // Create explanation element
-          const explanationElement = document.createElement('p');
-          explanationElement.textContent = data.explanation;
-
-          // Append elements to content box
-          contentBox.appendChild(imageElement);
-          contentBox.appendChild(titleElement);
-          contentBox.appendChild(explanationElement);
+          const cardContainer = document.querySelector('.cardContainer');
+          const card = createCard(data);
+          cardContainer.innerHTML = '';
+          cardContainer.appendChild(card);
 
           // Add event listener to "Add to Favorites" button
           const addToFavoritesButton = document.getElementById('addToFavoritesButton');
@@ -80,12 +51,80 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  // Create card container
+  const cardContainer = document.querySelector('.cardContainer');
+
+  // Function to create a card element
+  function createCard(data) {
+    // Create card element
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    // Create image element
+    const image = document.createElement('img');
+    image.src = data.url;
+    image.alt = data.title;
+    image.classList.add('card-image');
+
+    // Create button element
+    const button = document.createElement('a');
+    button.classList.add('btn-floating', 'halfway-fab', 'waves-effect', 'waves-light', 'red', 'addToFavoritesButton');
+    button.innerHTML = '<i class="material-icons">+</i>';
+
+    // Append image and button to card
+    card.appendChild(image);
+    card.appendChild(button);
+
+    // Create content element
+    const content = document.createElement('div');
+    content.classList.add('card-content');
+
+    // Create title element
+    const titleElement = document.createElement('h2');
+    titleElement.textContent = data.title;
+
+    // Create explanation element
+    const explanationElement = document.createElement('p');
+    explanationElement.textContent = data.explanation;
+
+    // Append title and explanation to content
+    content.appendChild(titleElement);
+    content.appendChild(explanationElement);
+
+    // Append content to card
+    card.appendChild(content);
+
+    // Append card to card container
+    cardContainer.appendChild(card);
+  }
+
+  // Function to fetch NASA's APOD for a specific date
+  function fetchAPOD(date) {
+    const apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
+    let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        createCard(data);
+      })
+      .catch(error => {
+        console.error('Error fetching APOD:', error);
+      });
+  }
+
   // Call the fetchAPOD function when the DOM content is loaded
   fetchAPOD(today);
 
   // Listen for change on datepicker input
   document.getElementById('datePicker').addEventListener('change', function (event) {
     const selectedDate = event.target.value;
+    // Call the fetchAPOD function to fetch APOD for the selected date
     fetchAPOD(selectedDate);
   });
 });
