@@ -109,3 +109,21 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+#modalImage {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-content {
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal{
+  width: 90% !important;
+  height: 90% !important;
+  object-fit: cover;
+  overflow-y: hidden !important
+}
