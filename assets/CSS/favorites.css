@@ -13,8 +13,10 @@
   
   /* CSS for the card title */
   .card-title {
-    overflow-wrap: break-word; /* Allow the title text to break into multiple lines */
-  }
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    max-width: 100%;}
   
   /* CSS for the card image */
   .card img {
@@ -25,4 +27,9 @@
   /* CSS for description modal */
   .modal {
     max-width: 80%; /* Adjust the maximum width of the modal */
+  }
+
+  .content{
+    display:flex;
+    flex-wrap: wrap;
   }
