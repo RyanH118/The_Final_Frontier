@@ -155,6 +155,7 @@ footer a:hover {
   flex-direction: column;
 }
 
+
 #imageLibraryBody{
 background-image: url(/assets/images/IDR_THEME_NTP_ATTRIBUTION.png);
 background-size: cover;
@@ -187,4 +188,35 @@ button {
 button:hover{
   background-color: #0055cc; 
   transform: scale(1.01); 
+}
+
+#modalImage {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-content {
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal{
+  width: 90% !important;
+  height: 90% !important;
+  object-fit: cover;
+  overflow-y: hidden !important
+}
+#refreshButton {
+  display: inline;
+}
+#rover-page-title {
+  text-align: center;
+  margin-right: 370px;
+  margin-bottom: 50px;
+}
+
+#rover-body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg/1920px-PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg);
+  background-size: cover;
 }
