@@ -24,24 +24,44 @@ function searchNasaImages() {
                 const imageDiv = document.createElement("div");
                 imageDiv.classList.add("image-container");
                 imageDiv.innerHTML = `
-                <div class="row">
-                    <div class="col s12 m6" id="imagesCard">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src= "${image}"></img>
-                                <span class="card-title">${title}</span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
-                                </div>
-                                <div class="card-content">
-                                    <p>${description}</p>
+                        <div class="row">
+                            <div class="col s12 m6" id="imagesCard">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="${image}"></img>
+                                        <span class="card-title">${title}</span>
+                                            <a class="btn-floating halfway-fab waves-effect waves-light red addToFavoritesButton"><i class="material-icons">+</i></a>
+                                        </div>
+                                        <div class="card-content">
+                                            <p>${description}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>`
-                                
+                        </div>`;
 
                 imageContainer.appendChild(imageDiv);
+
+                // Add event listener to "Add to Favorites" button
+                const addToFavoritesButton = imageDiv.querySelector('.addToFavoritesButton');
+                addToFavoritesButton.addEventListener('click', function () {
+                    // Store image data in local storage
+                    const favoriteImages = JSON.parse(localStorage.getItem('favoriteImages')) || [];
+                    // Check if the image is already in favorites
+                    const isDuplicate = favoriteImages.some(img => img.title === title);
+                    if (!isDuplicate) {
+                        favoriteImages.push({
+                            title: title,
+                            url: image,
+                            explanation: description
+                        });
+                        console.log(favoriteImages)
+                        localStorage.setItem('favoriteImages', JSON.stringify(favoriteImages));
+                        console.log('Added to favorites:', title);
+                    } else {
+                        console.log('Image is already in favorites.');
+                    }
+                });
             });
         })
         .catch(error => console.error(error));
