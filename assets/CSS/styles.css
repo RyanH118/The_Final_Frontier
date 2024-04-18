@@ -173,5 +173,17 @@ footer a:hover {
   object-fit: cover;
   overflow-y: hidden !important
 }
+#refreshButton {
+  display: inline;
+}
+#rover-page-title {
+  text-align: center;
+  margin-right: 370px;
+  margin-bottom: 50px;
+}
 
+#rover-body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg/1920px-PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg);
+  background-size: cover;
+}
 
