@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: darkgray;
   }
 
   header {
@@ -48,7 +49,7 @@ header img {
    .sidebar { 
     border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: darkgray;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: 100vh;
   }
@@ -82,3 +83,22 @@ header img {
   #imagesCard {
     width: 500px;
   }
+
+ 
+  .datepicker-date-display {
+ background-image: url(/assets/images/spaceBG.jpg);
+  }
+
+  .datepicker-day-button:hover {
+    background-color: lightgrey;
+  }
+  .datepicker-modal {
+    background-image: url(/assets/images/stars2.jpg) ; 
+}
+
+
+
+.datepicker { 
+  font-family: 'Orbitron', sans-serif; 
+  color: black;  
+}
