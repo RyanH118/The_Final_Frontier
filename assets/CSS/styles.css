@@ -5,11 +5,13 @@
   --black: #0B0C13;
 }
 body { 
-  font-family: Arial, sans-serif; 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: darkgray;
+  }
 
 header {
   position: relative; /* Establishes a positioning context for absolute elements inside */
@@ -36,22 +38,23 @@ header img {
 }
 
 
-footer { 
-  background: #5caee5; 
-  padding: 10px; 
-  text-align: center; 
-  width: 100%;
-}
-.main-body { /* Flex container */
-  display: flex;
-}
- .sidebar { 
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  height: 100vh;
-}
+
+  footer { 
+    background: #5caee5; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%;
+  }
+  .main-body { /* Flex container */
+    display: flex;
+  }
+   .sidebar { 
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: darkgray;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100vh;
+  }
 
 .content img {
   max-width: 100%; /* Ensure the image fits within the container */
@@ -80,6 +83,24 @@ button {
   justify-content: end;
 }
 
+  .datepicker-date-display {
+ background-image: url(/assets/images/spaceBG.jpg);
+  }
+
+  .datepicker-day-button:hover {
+    background-color: lightgrey;
+  }
+  .datepicker-modal {
+    background-image: url(/assets/images/stars2.jpg) ; 
+}
+
+
+.datepicker { 
+  font-family: 'Orbitron', sans-serif; 
+  color: black;  
+}
+=======
 #imagesCard {
   width: 422px;
 }
+
