@@ -5,12 +5,12 @@
   --black: #0B0C13;
 }
 body { 
-
     font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: darkgray;
+    height:100%
   }
 
 header {
@@ -40,7 +40,7 @@ header img {
 
 
   footer { 
-    background: #5caee5; 
+    background: #3b3b3b; 
     padding: 10px; 
     text-align: center; 
     width: 100%;
@@ -49,11 +49,12 @@ header img {
     display: flex;
   }
    .sidebar { 
-    border: 1px solid #ccc;
+    border: px solid #ccc;
     padding: 10px;
-    background-color: darkgray;
+    background-color: #3b3b3b;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     height: 100vh;
+    width: 200px;
   }
 
 .content img {
@@ -98,9 +99,51 @@ button {
 .datepicker { 
   font-family: 'Orbitron', sans-serif; 
   color: black;  
+  text-align: center;
 }
-=======
+
 #imagesCard {
   width: 422px;
 }
 
+.btn {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  background-color: #538AC3;
+  color: white; 
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #0055cc; 
+  transform: scale(1.10); 
+}
+
+.row, .col.s2 {
+  padding: 0;
+  margin: 0;
+}
+
+#datePicker:hover {
+  background-color: whitesmoke ; 
+  border-color: var(--black); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  color: #212529; 
+}
+
+#datePicker{
+  background-color: whitesmoke;
+}
+
+
+footer a {
+  color: lightblue; 
+  text-decoration: none; 
+}
+
+footer a:hover {
+  color: blue;
+}
