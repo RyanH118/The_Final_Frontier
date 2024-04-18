@@ -1,84 +1,85 @@
 
 :root {
-    --lblue: #538AC3;
-    --lgrey: #E0E1EA;
-    --black: #0B0C13;
-  }
+  --lblue: #538AC3;
+  --lgrey: #E0E1EA;
+  --black: #0B0C13;
+}
 body { 
-    font-family: Arial, sans-serif; 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    position: relative; /* Establishes a positioning context for absolute elements inside */
-    width: 100%;
-    height: 300px; /* Adjust this as needed */
-    overflow: hidden;
+header {
+  position: relative; /* Establishes a positioning context for absolute elements inside */
+  width: 100%;
+  height: 300px; /* Adjust this as needed */
+  overflow: hidden;
 }
 
 header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the full area */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full area */
 }
 
 .header-text {
-    position: absolute; 
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Ensures perfect centering */
-    color: white; /* Makes text visible against darker images */
-    font-size: 3em; /* Adjust font size as needed */
-    text-align: center; /* Centers the text horizontally */
-    font-family: "Orbitron";
+  position: absolute; 
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  color: white; /* Makes text visible against darker images */
+  font-size: 3em; /* Adjust font size as needed */
+  text-align: center; /* Centers the text horizontally */
+  font-family: "Orbitron";
 }
 
 
-  footer { 
-    background: #5caee5; 
-    padding: 10px; 
-    text-align: center; 
-    width: 100%;
-  }
-  .main-body { /* Flex container */
-    display: flex;
-  }
-   .sidebar { 
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height: 100vh;
-  }
+footer { 
+  background: #5caee5; 
+  padding: 10px; 
+  text-align: center; 
+  width: 100%;
+}
+.main-body { /* Flex container */
+  display: flex;
+}
+ .sidebar { 
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 100vh;
+}
 
-  .content img {
-    max-width: 100%; /* Ensure the image fits within the container */
-    max-height: 80vh; /* Limit the height to 80% of viewport height */
-    padding-top: 30px;
-  }
-  input[type="search"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-  }
-  button { 
-    display: block; 
-    margin: 10px 0; 
-    padding: 10px; 
-    width: 100%; 
-  }
+.content img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 80vh; /* Limit the height to 80% of viewport height */
+  padding-top: 30px;
+}
+input[type="search"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+button { 
+  display: block; 
+  margin: 10px 0; 
+  padding: 10px; 
+  width: 100%; 
+}
 
-  #roverCard {
-    margin: 5px;
-  }
+#roverCard {
+  margin: 5px;
+}
 
-  #imageContainer{
-    display: flex;
-    flex-wrap: wrap;
-  }
+#imageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
 
-  #imagesCard {
-    width: 500px;
-  }
+#imagesCard {
+  width: 422px;
+}
