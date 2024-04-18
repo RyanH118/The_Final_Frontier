@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         titleElement.classList.add('card-title');
         titleElement.textContent = title;
 
-
         // Append elements to card
         content.appendChild(titleElement);
         card.appendChild(image);
@@ -50,6 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
             apodData.forEach(data => {
                 const card = createCard(data.title, data.url, data.explanation);
                 content.appendChild(card);
+        
+                // Add event listener for image modal
+                card.querySelector('.card-image').addEventListener('click', function () {
+                    let src = data.url;
+                    let modalImage = document.getElementById('modalImage');
+                    if (modalImage) {
+                        modalImage.src = src;
+                        // Open modal
+                        const instance = M.Modal.getInstance(document.getElementById('modal1'));
+                        instance.open();
+                    } else {
+                        console.error("modalImage element not found.");
+                    }
+                });
             });
         } else {
             content.innerHTML += "<p>No APOD data available.</p>";
@@ -60,6 +73,20 @@ document.addEventListener("DOMContentLoaded", function () {
             roverData.forEach(data => {
                 const card = createCard(data.title, data.url, data.explanation);
                 content.appendChild(card);
+
+                // Add event listener for image modal
+                card.querySelector('.card-image').addEventListener('click', function () {
+                    let src = data.url;
+                    let modalImage = document.getElementById('modalImage');
+                    if (modalImage) {
+                        modalImage.src = src;
+                        // Open modal
+                        const instance = M.Modal.getInstance(document.getElementById('modal1'));
+                        instance.open();
+                    } else {
+                        console.error("modalImage element not found.");
+                    }
+                });
             });
         } else {
             content.innerHTML += "<p>No Rover data available.</p>";
@@ -70,6 +97,20 @@ document.addEventListener("DOMContentLoaded", function () {
             imageData.forEach(data => {
                 const card = createCard(data.title, data.url, data.explanation);
                 content.appendChild(card);
+                
+                // Add event listener for image modal
+                card.querySelector('.card-image').addEventListener('click', function () {
+                    let src = data.url;
+                    let modalImage = document.getElementById('modalImage');
+                    if (modalImage) {
+                        modalImage.src = src;
+                        // Open modal
+                        const instance = M.Modal.getInstance(document.getElementById('modal1'));
+                        instance.open();
+                    } else {
+                        console.error("modalImage element not found.");
+                    }
+                });
             });
         } else {
             content.innerHTML += "<p>No Image data available.</p>";
@@ -78,4 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Call renderCards function to render cards on page load
     renderCards();
+    
+    // Initialize modals
+    $('.modal').modal();
 });

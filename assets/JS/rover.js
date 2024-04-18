@@ -21,7 +21,9 @@ const roverAPI = function () {
                         const roverCard = $(`
                              <div class='col card s12 l5 medium' id='roverCard'>
                                  <div class= card-image>
+                                    <a  href='#modal1' class='${randomNum} modal-trigger' data-src='${roverImg}' >
                                      <img src='${roverImg}'>
+                                    </a> 
                                  </div>  
                                  <div class= card-content>
                                      <p>Date Image was taken: ${pictureDate}<br />Camera used to capture image: ${camera}</p>
@@ -53,6 +55,12 @@ const roverAPI = function () {
                                 console.log('Rover photo is already in favorites.');
                             }
                         });
+
+                        // Add event listener for image modal
+                        $(`.${randomNum}`).click(function() {
+                            let src = $(this).data('src');
+                            document.getElementById('modalImage').src = src;
+                        });
                     }
                 });
             }
@@ -66,4 +74,9 @@ const newImage = function () {
 };
 
 $('#refreshButton').click(newImage);
+
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
 roverAPI();

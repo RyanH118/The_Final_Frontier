@@ -10,20 +10,20 @@
 </head>
 
 <body>
-  <div>
-  <input type="text" id="searchInput" placeholder="What will space show you?">
-  <button onclick="searchNasaImages()">Search</button>
-  </div>
   
   
   <div class="row">
     <div class="col s2">
       <div class="sidebar">
-        <button><a href="../index.html">Home</a></button>
-        <button><a href="./rover_pictures.html">Rover Images</a></button>
-        <button><a href="./image_library.html">Image Library</a></button>
-        <button><a href="./favorites.html">Favorites</a></button>
+        <a href="../index.html"><button>Home</button></a>
+        <a href="./rover_pictures.html"><button>Rover Images</button></a>
+        <a href="./image_library.html"><button>Image Library</button></a>
+        <a href="./favorites.html"><button>Favorites</button></a>
       </div>
+    </div>
+    <div class="searchBar">
+      <input type="text" id="searchInput" placeholder="What will space show you?">
+      <button onclick="searchNasaImages()">Search</button>
     </div>
     <div id="imageContainer" class="content center-align"></div>
   </div>
