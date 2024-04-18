@@ -1,7 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
+  var instances = M.Datepicker.init(elems, {
+    format: 'yyyy-mm-dd'
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get today's date in the format YYYY-MM-DD
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('datePicker').value = today;
+
 
   // Function to fetch NASA's APOD for a specific date
   function fetchAPOD(date) {

@@ -25,7 +25,7 @@ function searchNasaImages() {
                 imageDiv.classList.add("image-container");
                 imageDiv.innerHTML = `
                         <div class="row">
-                            <div class="col s12 m6" id="imagesCard">
+                            <div class="col s12 m6 modal-trigger" id="imagesCard">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="${image}"></img>
