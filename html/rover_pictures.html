@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,36 @@
     <link rel="stylesheet" href="../assets/CSS/styles.css">
     <title>Rover Images</title>
 </head>
+
 <body>
 
     <div class="row">
         <div class="col s2">
-          <div class="sidebar">
-            <button><a href="../index.html">Home</a></button>
-            <button><a href="./rover_pictures.html">Rover Images</a></button>
-            <button><a href="./image_library.html">Image Library</a></button>
-            <button><a href="./favorites.html">Favorites</a></button>
-          </div>
+            <div class="sidebar">
+                <button><a href="../index.html">Home</a></button>
+                <button><a href="./rover_pictures.html">Rover Images</a></button>
+                <button><a href="./image_library.html">Image Library</a></button>
+                <button><a href="./favorites.html">Favorites</a></button>
+            </div>
         </div>
 
-    <div class="row">
-        <div class="col s10" id="roverCardContainer">
-            <div class="row cardContainer"></div>
-            <a class="waves-effect waves-light btn" id="refreshButton">Get new Images</a>
+        <div class="row">
+            <div class="col s10" id="roverCardContainer">
+                <div class="row cardContainer"></div>
+                <a class="waves-effect waves-light btn" id="refreshButton">Get new Images</a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <!-- Modal content goes here -->
+                        <img id="modalImage" src="" alt="Modal Image">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../assets/JS/rover.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../assets/JS/rover.js"></script>
 </body>
+
 </html>
