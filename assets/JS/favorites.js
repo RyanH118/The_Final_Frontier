@@ -36,8 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderCards() {
         const apodData = JSON.parse(localStorage.getItem('favoriteAPOD')) || [];
         const roverData = JSON.parse(localStorage.getItem('favoriteRover')) || [];
-        const imageData = JSON.parse(localStorage.getItem('favoriteImage')) || [];
+        const imageData = JSON.parse(localStorage.getItem('favoriteImages')) || [];
         const content = document.querySelector('.content');
+        console.log(apodData);
+        console.log(imageData);
+        console.log(roverData);
 
         // Clear existing content
         content.innerHTML = '';
