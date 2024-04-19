@@ -76,6 +76,7 @@ button {
 
 #roverCard {
   margin: 5px;
+  margin-bottom: 25px;
 }
 
 #imageContainer{
@@ -201,7 +202,7 @@ button:hover{
   height: 100% !important;
 }
 
-.modal{
+.modalPopout {
   height: 100% !important;
   object-fit: cover;
   overflow-y: hidden !important
@@ -218,4 +219,8 @@ button:hover{
 #rover-body {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg/1920px-PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg);
   background-size: cover;
+}
+
+#mainCard {
+  margin-bottom: 50px;
 }
