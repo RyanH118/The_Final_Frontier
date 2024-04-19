@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function createCard(title, url, explanation) {
         // Create card element
         const card = document.createElement('div');
-        card.classList.add('card');
-
+        card.classList.add('card', 'favCards');
+        
         // Create image element
         const image = document.createElement('img');
         image.src = url;

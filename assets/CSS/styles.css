@@ -221,6 +221,29 @@ button:hover{
   background-size: cover;
 }
 
+
+.github-icons a{
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 15px;
+  color: #538AC3;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.github-icons a:hover{
+  color: orangered;
+  transform: translateY(-5px);
+}
+
+.github-icons{
+  margin-top: 10px;
+}
+
+.favCards{
+  margin: 8px;
+
 #mainCard {
   margin-bottom: 50px;
+
 }

@@ -9,26 +9,36 @@
   <link rel="stylesheet" href="../assets/CSS/styles.css">
   <link rel="stylesheet" href="../assets/CSS/favorites.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-<header>
-  <img src="../assets/images/space4.gif"Animated Image">
-  <div class="header-text">
-  The Final Frontier
-  </div>
-</header>
+  <header>
+    <img src="../assets/images/space4.gif" Animated Image">
+    <div class="header-text">
+      The Final Frontier
+    </div>
+  </header>
 
-<div class="row">
-  <div class="col s2">
-    <div class="sidebar">
-      <a href="../index.html"><button>Home</button></a>
-      <a href="./rover_pictures.html"><button>Rover Images</button></a>
-      <a href="./image_library.html"><button>Image Library</button></a>
-      <a href="./favorites.html"><button>Favorites</button></a>
+  <div class="row">
+    <div class="col s2">
+      <div class="sidebar">
+        <a href="../index.html" class="btn">Home</a>
+        <a href="./rover_pictures.html" class="btn">Rover Images</a>
+        <a href="./image_library.html" class="btn">Image Library</a>
+        <a href="./favorites.html" class="btn">Favorites</a>
+      </div>
+    </div>
+    <!-- Box to append favorites to -->
+    <div class="content col-8">
     </div>
   </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+
   <!-- Box to append favorites to -->
   <div class="content col-8">
   </div>
@@ -36,20 +46,27 @@
 <!-- Modal Structure -->
 <div id="modal1" class="modal modalPopout">
   <div class="modal-content popout">
+
       <!-- Modal content goes here -->
       <img id="modalImage" src="" alt="Modal Image">
+    </div>
   </div>
-</div>
 
 
 
-<footer>
-  <p>Contact Me: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="../assets/JS/favorites.js"></script>
+  <footer>
+    <div class="github-icons">
+      <a href="https://github.com/CarlosLavayenJr" title="Visit Carlos's GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://github.com/RyanH118" title="Visit Ryan's GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://github.com/TurnerHelical" title="Visit Hunter's's GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://github.com/iturnberg" title="Visit Ian's GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../assets/JS/favorites.js"></script>
+  <script src="https://kit.fontawesome.com/53988874b3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
