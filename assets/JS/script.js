@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems, {
     format: 'yyyy-mm-dd'
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
   // Get today's date in the format YYYY-MM-DD
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('datePicker').value = today;
@@ -29,26 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const card = createCard(data);
           cardContainer.innerHTML = '';
           cardContainer.appendChild(card);
-
-          // Add event listener to "Add to Favorites" button
-          const addToFavoritesButton = document.getElementById('addToFavoritesButton');
-          addToFavoritesButton.addEventListener('click', function () {
-            // Store image data in local storage
-            const favoriteAPOD = JSON.parse(localStorage.getItem('favoriteAPOD')) || [];
-            // Check if the image is already in favorites
-            const isDuplicate = favoriteAPOD.some(apod => apod.title === data.title);
-            if (!isDuplicate) {
-              favoriteAPOD.push({
-                title: data.title,
-                url: data.url,
-                explanation: data.explanation
-              });
-              localStorage.setItem('favoriteAPOD', JSON.stringify(favoriteAPOD));
-              console.log('Added to favorites:', data.title);
-            } else {
-              console.log('APOD is already in favorites.');
-            }
-          });
         } else {
           console.error('Media type is not an image.');
         }
@@ -103,50 +81,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append card to card container
     cardContainer.appendChild(card);
+
+    // Add event listener to "Add to Favorites" button
+    button.addEventListener('click', function () {
+      addToFavorites(data);
+    });
+
+    return card;
   }
 
- // Function to fetch NASA's APOD for a specific date
-function fetchAPOD(date) {
-  const apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
-  let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
-
-  fetch(apiUrl)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      // Check if the card already exists
-      const existingCard = document.querySelector('.card');
-      if (existingCard) {
-        // Update existing card with new data
-        updateCard(existingCard, data);
-      } else {
-        // Create a new card
-        createCard(data);
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching APOD:', error);
-    });
-}
-
-// Function to update the existing card with new APOD data
-function updateCard(card, data) {
-  // Update image source and alt attribute
-  const image = card.querySelector('.card-image');
-  image.src = data.url;
-  image.alt = data.title;
-
-  // Update title and explanation
-  const titleElement = card.querySelector('.card-content h2');
-  titleElement.textContent = data.title;
-
-  const explanationElement = card.querySelector('.card-content p');
-  explanationElement.textContent = data.explanation;
-}
+  // Function to add the APOD to favorites
+  function addToFavorites(data) {
+    // Store image data in local storage
+    const favoriteAPOD = JSON.parse(localStorage.getItem('favoriteAPOD')) || [];
+    // Check if the image is already in favorites
+    const isDuplicate = favoriteAPOD.some(apod => apod.title === data.title);
+    if (!isDuplicate) {
+      favoriteAPOD.push({
+        title: data.title,
+        url: data.url,
+        explanation: data.explanation
+      });
+      localStorage.setItem('favoriteAPOD', JSON.stringify(favoriteAPOD));
+      console.log('Added to favorites:', data.title);
+    } else {
+      console.log('APOD is already in favorites.');
+    }
+  }
 
   // Call the fetchAPOD function when the DOM content is loaded
   fetchAPOD(today);
