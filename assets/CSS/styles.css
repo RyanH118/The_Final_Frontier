@@ -76,12 +76,13 @@ button {
 
 #roverCard {
   margin: 5px;
+  margin-bottom: 25px;
 }
 
 #imageContainer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: center;
 }
 
   .datepicker-date-display {
@@ -103,9 +104,9 @@ button {
 }
 
 #imagesCard {
-  width: 422px;
+  width: 380px;
+  padding: 6px;
 }
-
 
 .btn {
   display: block;
@@ -150,14 +151,14 @@ footer a:hover {
 }
 
 .searchBar {
-  width: 83%;
+  width: 75%;
   display: flex;
   flex-direction: column;
 }
 
 
 #imageLibraryBody{
-background-image: url(/assets/images/IDR_THEME_NTP_ATTRIBUTION.png);
+background-image: url(../Images/IDR_THEME_NTP_ATTRIBUTION.png);
 background-size: cover;
 }
 
@@ -195,18 +196,17 @@ button:hover{
   height: 100% !important;
 }
 
-/* .modal-content {
+.popout {
   padding: 0 !important;
   width: 100% !important;
   height: 100% !important;
-} */
+}
 
-/* .modal{
-  width: 90% !important;
-  height: 90% !important;
+.modalPopout {
+  height: 100% !important;
   object-fit: cover;
   overflow-y: hidden !important
-} */
+}
 #refreshButton {
   display: inline;
 }
@@ -220,6 +220,7 @@ button:hover{
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg/1920px-PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg);
   background-size: cover;
 }
+
 
 .github-icons a{
   text-decoration: none;
@@ -241,4 +242,8 @@ button:hover{
 
 .favCards{
   margin: 8px;
+
+#mainCard {
+  margin-bottom: 50px;
+
 }
