@@ -220,3 +220,25 @@ button:hover{
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg/1920px-PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg);
   background-size: cover;
 }
+
+.github-icons a{
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 15px;
+  color: #538AC3;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.github-icons a:hover{
+  color: orangered;
+  transform: translateY(-5px);
+}
+
+.github-icons{
+  margin-top: 10px;
+}
+
+.favCards{
+  margin: 8px;
+}
