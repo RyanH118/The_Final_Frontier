@@ -98,25 +98,48 @@ document.addEventListener("DOMContentLoaded", function () {
     cardContainer.appendChild(card);
   }
 
-  // Function to fetch NASA's APOD for a specific date
-  function fetchAPOD(date) {
-    const apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
-    let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+ // Function to fetch NASA's APOD for a specific date
+function fetchAPOD(date) {
+  const apiKey = 'gL5Az0Z7i2Yvl2kLUQ9azhjjV2iGWkX5TOr7Zjp6';
+  let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
 
-    fetch(apiUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Check if the card already exists
+      const existingCard = document.querySelector('.card');
+      if (existingCard) {
+        // Update existing card with new data
+        updateCard(existingCard, data);
+      } else {
+        // Create a new card
         createCard(data);
-      })
-      .catch(error => {
-        console.error('Error fetching APOD:', error);
-      });
-  }
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching APOD:', error);
+    });
+}
+
+// Function to update the existing card with new APOD data
+function updateCard(card, data) {
+  // Update image source and alt attribute
+  const image = card.querySelector('.card-image');
+  image.src = data.url;
+  image.alt = data.title;
+
+  // Update title and explanation
+  const titleElement = card.querySelector('.card-content h2');
+  titleElement.textContent = data.title;
+
+  const explanationElement = card.querySelector('.card-content p');
+  explanationElement.textContent = data.explanation;
+}
 
   // Call the fetchAPOD function when the DOM content is loaded
   fetchAPOD(today);
