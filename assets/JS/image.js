@@ -33,6 +33,7 @@ function searchNasaImages() {
                                             <a class="btn-floating halfway-fab waves-effect waves-light red addToFavoritesButton"><i class="material-icons">+</i></a>
                                         </div>
                                         <div class="card-content">
+                                            <a class="modal-trigger" href="#imageModal">View details</a>
                                             <p>${description}</p>
                                         </div>
                                     </div>
@@ -41,6 +42,39 @@ function searchNasaImages() {
                         </div>`;
 
                 imageContainer.appendChild(imageDiv);
+
+                // Add event listener to the modal trigger
+                const modalTrigger = imageDiv.querySelector('.modal-trigger');
+                modalTrigger.addEventListener('click', function () {
+                    // Get the title, description, and image from the card
+                    const title = imageDiv.querySelector('.card-title').textContent;
+                    const description = imageDiv.querySelector('.card-content p').textContent;
+                    const image = imageDiv.querySelector('img').src;
+
+                    // Update the modal content
+                    document.getElementById('modalTitle').textContent = title;
+                    document.getElementById('modalDescription').textContent = description;
+
+                    // Create an <img> element and set its source to the image from the card
+                    const modalImage = document.createElement('img');
+                    modalImage.src = image;
+
+                    // Get the modal content element
+                    const modalContent = document.querySelector('#imageModal .modal-content');
+
+                    // Remove any existing images from the modal content
+                    modalContent.querySelectorAll('img').forEach(img => img.remove());
+
+                    // Append the new <img> element to the modal content
+                    modalContent.appendChild(modalImage);
+
+                    // Initialize the modal
+                    const modal = document.getElementById('imageModal');
+                    M.Modal.init(modal, {});
+
+                    // Open the modal
+                    M.Modal.getInstance(modal).open();
+                });
 
                 // Add event listener to "Add to Favorites" button
                 const addToFavoritesButton = imageDiv.querySelector('.addToFavoritesButton');
