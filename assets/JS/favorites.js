@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             apodData.forEach(data => {
                 const card = createCard(data.title, data.url, data.explanation);
                 content.appendChild(card);
-        
+
                 // Add event listener for image modal
                 card.querySelector('.card-image').addEventListener('click', function () {
                     let src = data.url;
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             imageData.forEach(data => {
                 const card = createCard(data.title, data.url, data.explanation);
                 content.appendChild(card);
-                
+
                 // Add event listener for image modal
                 card.querySelector('.card-image').addEventListener('click', function () {
                     let src = data.url;
@@ -116,10 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
             content.innerHTML += "<p>No Image data available.</p>";
         }
     }
-    
+
     // Call renderCards function to render cards on page load
     renderCards();
-    
+
     // Initialize modals
     $('.modal').modal();
 });
