@@ -195,18 +195,17 @@ button:hover{
   height: 100% !important;
 }
 
-/* .modal-content {
+.popout {
   padding: 0 !important;
   width: 100% !important;
   height: 100% !important;
-} */
+}
 
-/* .modal{
-  width: 90% !important;
-  height: 90% !important;
+.modal{
+  height: 100% !important;
   object-fit: cover;
   overflow-y: hidden !important
-} */
+}
 #refreshButton {
   display: inline;
 }
