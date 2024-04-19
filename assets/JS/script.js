@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create card element
     const card = document.createElement('div');
     card.classList.add('card');
+    card.setAttribute('id','mainCard')
 
     // Create image element
     const image = document.createElement('img');
