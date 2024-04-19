@@ -85,14 +85,14 @@ button {
 }
 
   .datepicker-date-display {
- background-image: url(/assets/images/spaceBG.jpg);
+ background-image: url(../Images/spaceBG.jpg);
   }
 
   .datepicker-day-button:hover {
     background-color: lightgrey;
   }
   .datepicker-modal {
-    background-image: url(/assets/images/stars2.jpg) ; 
+    background-image: url(../Images/stars2.jpg) ; 
 }
 
 
@@ -195,18 +195,18 @@ button:hover{
   height: 100% !important;
 }
 
-.modal-content {
+/* .modal-content {
   padding: 0 !important;
   width: 100% !important;
   height: 100% !important;
-}
+} */
 
-.modal{
+/* .modal{
   width: 90% !important;
   height: 90% !important;
   object-fit: cover;
   overflow-y: hidden !important
-}
+} */
 #refreshButton {
   display: inline;
 }
