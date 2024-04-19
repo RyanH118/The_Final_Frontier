@@ -86,14 +86,14 @@ button {
 }
 
   .datepicker-date-display {
- background-image: url(../Images/spaceBG.jpg);
+ background-image: url(../images/spaceBG.jpg);
   }
 
   .datepicker-day-button:hover {
     background-color: lightgrey;
   }
   .datepicker-modal {
-    background-image: url(../Images/stars2.jpg) ; 
+    background-image: url(../images/stars2.jpg) ; 
 }
 
 
