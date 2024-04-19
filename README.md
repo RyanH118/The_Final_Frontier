@@ -10,17 +10,17 @@ https://ryanh118.github.io/The_Final_Frontier/
 
 ## Usage
 
-![alt text](./assets/Images/Home.png)
+![alt text](./assets/images/Home.png)
 
-![alt text](./assets/Images/Card.png)
+![alt text](./assets/images/Card.png)
 
-![alt text](./assets/Images/Calendar.png)
+![alt text](./assets/images/Calendar.png)
 
-![alt text](./assets/Images/Rover.png)
+![alt text](./assets/images/Rover.png)
 
-![alt text](./assets/Images/Image_Library.png)
+![alt text](./assets/images/Image_Library.png)
 
-![alt text](./assets/Images/Favorites.png)
+![alt text](./assets/images/Favorites.png)
 
 ## Credits
 
