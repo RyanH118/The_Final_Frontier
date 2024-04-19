@@ -81,7 +81,7 @@ button {
 #imageContainer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: center;
 }
 
   .datepicker-date-display {
@@ -103,9 +103,9 @@ button {
 }
 
 #imagesCard {
-  width: 422px;
+  width: 380px;
+  padding: 6px;
 }
-
 
 .btn {
   display: block;
@@ -150,14 +150,14 @@ footer a:hover {
 }
 
 .searchBar {
-  width: 83%;
+  width: 75%;
   display: flex;
   flex-direction: column;
 }
 
 
 #imageLibraryBody{
-background-image: url(/assets/images/IDR_THEME_NTP_ATTRIBUTION.png);
+background-image: url(../Images/IDR_THEME_NTP_ATTRIBUTION.png);
 background-size: cover;
 }
 

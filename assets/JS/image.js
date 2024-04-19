@@ -26,11 +26,11 @@ function searchNasaImages() {
                 imageDiv.innerHTML = `
                         <div class="row">
                             <div class="col s12 m6" id="imagesCard">
-                                <div class="card">
+                                <div class="card small">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red addToFavoritesButton front"><i class="material-icons front">+</i></a>
                                     <div class="card-image">
                                         <img src="${image}"></img>
                                         <span class="card-title">${title}</span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light red addToFavoritesButton"><i class="material-icons">+</i></a>
                                         </div>
                                         <div class="card-content">
                                             <a class="modal-trigger" href="#imageModal">View details</a>
